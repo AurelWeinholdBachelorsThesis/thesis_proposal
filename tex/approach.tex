@@ -1,1 +1,29 @@
 \section{Approach}
+
+Extended Berkeley Packet Filter (eBPF) is a flexible virtual machine in the
+Linux kernel programmable during runtime from user space. It allows for simple
+programs to be safely executed in the kernel space at various hook points. These
+simple programs may be written in a subset of C and then compiled into eBPF
+instructions, but similar to assembly, it is entirely possible to write the
+programs in eBPF instructions yourself. When loaded into the kernel, they are
+tested by the in-kernel verifier. This verifier checks the program against a set
+of restrictions including a limitation on the number of (eBPF) instructions and
+that there are not loops in the
+program\footnote{\url{https://www.kernel.org/doc/html/latest/bpf/verifier.html},
+accessed \formatdate{7}{6}{2022}} to
+ensure the safety of the kernel. Some of these restrictions however can be
+circumvented without diminishing the safety of the kernel.
+\todo{Rewrite part about loops.}
+
+% How is eBPF used? What can be achieved?
+Traditional usage of Berkeley Packet Filter was limited to network applications,
+hooking into the traffic control (TC) stage of the linux kernel network stack,
+the eXpress Data Path (XDP) or others(?) to allow inspection and filtering of
+packets early on in the pipeline. eBPF also allows to hook into other(?)
+syscalls widening the range of applications to.. .
+\todo{to what? Rewrite. Cite "Complex Complex Network Services with eBPF:
+Experiences and Lessons Learned" Miano}
+
+This thesis explores the possibilities in speeding up and enhancing near real
+time behavior by using and abusing(?) eBPF on the edge of an IIoT network to select
+tasks based on a priority model and the load of the edge device.
