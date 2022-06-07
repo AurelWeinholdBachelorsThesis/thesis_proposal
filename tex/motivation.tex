@@ -1,16 +1,43 @@
 \section{Motivation}
 
+% IIoT
 As industrial factories become larger and more connected, the demand for a
 decentralized distributed system consisting of sensors, controllers and
-compute-nodes grows larger over time. This describes the Industrial Internet of
-Things (IIoT), an umbrella term for networks consisting of many small devices,
-such as sensors or robots, possibly connected, coordinated and controlled by a
-cloud.
+compute-nodes grows larger over time.
+%This describes the Industrial Internet of Things (IIoT), an umbrella term for
+%networks consisting of many small devices, such as sensors or robots, possibly
+%connected, coordinated and controlled by a cloud.
+The Industrial Internet of Things is defined by
+\citeauthor{boyes_industrial_2018} to be a \enquote{system of networked smart
+    objects, cyber physical assets, [such as sensors or robots,] [$\dots$] and
+    optional cloud or edge computing platforms, which enable real time,
+    intelligent, and autonomous access, collection, analysis, communications,
+    and exchange of process, product and/or service information, within the
+    industrial environment [$\dots$].}%so as to optimize overall production value.}
 
-As these individual IIoT networks grow, more and more resources are needed for
-the networking, as well as the controlling component. To help reduce this, edge
+
+% edge
+\todo{First two sentences start with \enquote{As something gets bigger}. Change
+    that!}
+As these individual IIoT networks grow, more resources are necessary for the
+networking, as well as the controlling component. To help reduce this, edge
 computing, a new paradigm in distributed systems, has introduced the idea to
 (pre-)compute \enquote{on the edge} of the cloud, which might significantly
 reduce stress on the network and on the compute-resources of the cloud itself.
+\todo{Statistics on IIoT network growth}
+\todo{Statistics on network congestion in larger networks - why edge?}
+This edge computing is always subject to improvement benefiting the entire network.
 
-\todo{Both sentences start with \enquote{As something gets bigger}. Change that!}
+% real time
+Some control also exhibit real time behavior. These especially benefit from
+faster response times and sorting based on priority, enabling them to meet their
+hard deadlines.
+
+
+
+%But as these networks grow, traffic and the need for computing
+%power is increasing as well. This is where edge computing comes into play,
+%trying to reduce computational needs in the cloud and traffic into and out of
+%the cloud, by precomputing and presorting network traffic right on the edge of
+%the cloud. As this is a time sensitive task it might be worth exploring
+%possibilities to speed it up.
