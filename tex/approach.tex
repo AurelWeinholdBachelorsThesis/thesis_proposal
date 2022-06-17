@@ -1,15 +1,18 @@
 \section{Approach}
 
+\todo{sources}
 
 % How is eBPF used? What can be achieved?
-Traditional usage of Berkeley Packet Filter was limited to network applications,
-hooking into the traffic control (TC) stage of the linux kernel network stack,
-the eXpress Data Path (XDP) or others(?) to allow inspection and filtering of
-packets early on in the pipeline. eBPF also allows to hook into other(?)
-syscalls widening the range of applications to.. .
-\todo{to what? Rewrite. Cite "Complex Complex Network Services with eBPF:
-Experiences and Lessons Learned" Miano}
+Traditional usage of classic Berkeley Packet Filter (cBPF) was limited to
+network applications, hooking into the traffic control (TC) stage of the linux
+kernel network stack or the eXpress Data Path (XDP) to allow inspection and
+filtering of packets early on in the pipeline. Although limited it opened to
+door into advanced network level monitoring on the kernel level.
 
-This thesis explores the possibilities in speeding up and enhancing near real
-time behavior by using and abusing(?) eBPF on the edge of an IIoT network to select
-tasks based on a priority model and the load of the edge device.
+Only with its extension to eBPF in recent years, researchers have tried to use
+it for more advanced network related tasks~\cite{miano_creating_2018} and even
+other applications hooking into systemcalls.
+
+This thesis explores the possibilities in enhancing near real-time behavior by
+using and abusing(?) eBPF on the edge of an IIoT network to select tasks based
+on a priority model and the load of the edge device.
