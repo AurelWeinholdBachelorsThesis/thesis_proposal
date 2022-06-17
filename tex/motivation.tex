@@ -1,5 +1,8 @@
 \section{Motivation}
 
+\todo{First two sentences start with \enquote{As something gets bigger}. Change
+    that!}
+
 % IIoT
 As industrial factories become larger and more connected, the demand for a
 decentralized distributed system consisting of sensors, controllers and
@@ -32,6 +35,22 @@ This edge computing is always subject to improvement benefiting the entire netwo
 Some control also exhibit real time behavior. These especially benefit from
 faster response times and sorting based on priority, enabling them to meet their
 hard deadlines.
+
+% eBPF
+Extended Berkeley Packet Filter (eBPF) is a flexible virtual machine in the
+Linux kernel programmable during runtime from user space. It allows for simple
+programs to be safely executed in the kernel space at various hook points. These
+simple programs may be written in a subset of C and then compiled into eBPF
+instructions, but similar to assembly, it is entirely possible to write the
+programs in eBPF instructions yourself. When loaded into the kernel, they are
+tested by the in-kernel verifier. This verifier checks the program against a set
+of restrictions including a limitation on the number of (eBPF) instructions and
+that there are not loops in the
+program\footnote{\url{https://www.kernel.org/doc/html/latest/bpf/verifier.html},
+accessed \formatdate{7}{6}{2022}} to
+ensure the safety of the kernel. Some of these restrictions however can be
+circumvented without diminishing the safety of the kernel.
+\todo{Rewrite part about loops.}
 
 
 
