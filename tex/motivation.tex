@@ -38,22 +38,6 @@ deadlines might not be able to rely on the unknown network connection it with
 the cloud.
 \todo{Add actual source.} \todo{Rewrite \enquote{working depending}}
 
-% eBPF
-Extended Berkeley Packet Filter (eBPF) is a flexible virtual machine in the
-Linux kernel programmable during runtime from user space. It allows for simple
-programs to be safely executed in the kernel space at various hook points. These
-simple programs may be written in a subset of C and then compiled into eBPF
-instructions, but similar to assembly, it is entirely possible to write the
-programs in eBPF instructions yourself. When loaded into the kernel, they are
-tested by the in-kernel verifier. This verifier checks the program against a set
-of restrictions including a limitation on the number of (eBPF) instructions and
-that there are not loops in the
-program\footnote{\url{https://www.kernel.org/doc/html/latest/bpf/verifier.html},
-accessed \formatdate{7}{6}{2022}} to
-ensure the safety of the kernel. Some of these restrictions however can be
-circumvented without diminishing the safety of the kernel.
-\todo{Rewrite part about loops.}
-
 
 
 %But as these networks grow, traffic and the need for computing
