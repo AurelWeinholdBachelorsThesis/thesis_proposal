@@ -1,0 +1,72 @@
+\documentclass[11pt, a4paper]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black!19!black,
+	citecolor=black!19!black,
+	urlcolor=black!19!black
+}
+
+\usepackage{graphicx}
+\graphicspath{ {img/} }
+
+\usepackage{enumerate}
+\usepackage[nodayofweek, level]{datetime}
+
+\usepackage[backend=biber, sorting=none]{biblatex}
+\addbibresource{expose.bib}
+
+\usepackage{setspace}
+
+
+\newcommand{\todo}[1]{\begin{enumerate}[align=left]
+        \item [\textcolor{red}{\textbf{TODO:} }] \textcolor{red}{#1}
+    \end{enumerate}
+    } % TODO remove
+
+
+\begin{document}
+
+\begin{title}
+
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{tu_logo.pdf}
+
+        \vspace*{2em}
+        \LARGE
+        Extended Berkeley Packet Filter at the Edge of the Industrial Internet
+        of Things
+
+        \vspace*{1em}
+        \small
+        Bachelor's Thesis Proposal
+
+        \vspace*{1em}
+        Aurel Weinhold, 403779, a.weinhold@campus.tu-berlin.de
+
+        \vspace*{1em}
+        \today
+
+    \end{center}
+
+\end{title}
+
+
+% content
+\setstretch{2}{
+    \input{tex/motivation}
+    \input{tex/problem_statement.tex}
+    \input{tex/approach.tex}
+}
+% \content
+
+
+\printbibliography
+\end{document}
