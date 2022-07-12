@@ -31,8 +31,17 @@ Only with its extension to eBPF in recent years, researchers have tried to use
 it for more advanced network related tasks~\cite{miano_creating_2018} and even
 completely different applications hooking into systemcalls.
 
-This thesis explores the possibilities in enhancing near real-time behavior by
-using and abusing(?) eBPF on the edge of an IIoT network to
-%select tasks based on a priority model and the load of the edge device.
-respond to certain requests with pre-computed responses (?) and by that increase
-response-time and decrease unnecessary computational stress on the edge node.
+%This thesis explores the possibilities in enhancing near real-time behavior by
+%using and abusing(?) eBPF on the edge of an IIoT network to
+%%select tasks based on a priority model and the load of the edge device.
+%respond to certain requests with pre-computed responses (?) and by that increase
+%response-time and decrease unnecessary computational stress on the edge node.
+
+In this thesis we will introduce a framework using eBPF to enhance near
+real-time behavior by decreasing the response time of the aforementioned simple
+requests by avoiding the user space, and therefor context switches and
+inefficient scheduling. To achieve this, a filter is going to be designed which
+detects the type of packet received and decides based on criteria whether that
+request is to be handled by the original user space program, i.e. it needs more
+advanced processing or access to resources outside of the edge server, or to be
+directly replied to inside the kernel from a further eBPF program.
