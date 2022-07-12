@@ -40,8 +40,17 @@ completely different applications hooking into systemcalls.
 In this thesis we will introduce a framework using eBPF to enhance near
 real-time behavior by decreasing the response time of the aforementioned simple
 requests by avoiding the user space, and therefor context switches and
-inefficient scheduling. To achieve this, a filter is going to be designed which
-detects the type of packet received and decides based on criteria whether that
-request is to be handled by the original user space program, i.e. it needs more
-advanced processing or access to resources outside of the edge server, or to be
-directly replied to inside the kernel from a further eBPF program.
+inefficient scheduling, as shown in Figure~\ref{fig:communication_after}. To
+achieve this, a filter is going to be designed which detects the type of packet
+received and decides based on criteria whether that request is to be handled by
+the original user space program, i.e. it needs more advanced processing or
+access to resources outside of the edge server, or to be directly replied to
+inside the kernel from a further eBPF program.
+
+
+\begin{figure}[htpb]
+       \centering
+       \includegraphics[width=\linewidth]{communication_after}
+       \caption{communication after%
+       \label{fig:communication_after}}%
+\end{figure}
