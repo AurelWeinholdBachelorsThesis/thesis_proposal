@@ -14,10 +14,16 @@ currently require redundant overhead, such as context switches, which not only
 costs valuable computing power on the edge node, but also unnecessarily delays
 response.
 
+In this thesis we'll consider the following scenario. An IIoT network consisting
+of many IoT devices connected to an edge server which processes their requests.
+Most of these request only require a simple reply based on an internal state,
+saved on the edge server, which, compared to the incoming messages, only rarely
+changes. This means that the server is constantly replying with the same message
+containing that state. Now every single request has to go through the pipeline
+and experiences a context switch to then be processed in the user space in the
+Linux environment. This means it is scheduled with a low priority, possibly
+delaying it even further. It is however necessary for these messages to be
+processed as quickly as possible as that means that existing IoT devices can
+fulfill their service quicker and safer and potentially that even more IoT
+devices can be added to the network also increasing productivity.
 
-
-%Actual real-time can't
-
-
-%Edge computing has layen
-%To enable better Quality of Service (QoS)
