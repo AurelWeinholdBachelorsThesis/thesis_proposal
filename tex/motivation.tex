@@ -1,11 +1,9 @@
 \section{Motivation}
 
-%\todo{First two sentences start with \enquote{As something gets bigger}. Change that!}
-
 % IIoT
 As industrial factories become larger and more connected, the demand for a
 decentralized distributed system consisting of sensors, controllers and
-compute-nodes grows larger over time.
+compute-nodes grows larger.
 
 The Industrial Internet of Things, as defined by
 \citeauthor{boyes_industrial_2018}, is the aggregation of networked sensors and
@@ -17,22 +15,17 @@ industrial environment~\cite{boyes_industrial_2018}. In this context
 and energy~\cite{noauthor_industry_nodate}.
 
 % real-time
-%\todo{weird first sentence.}
 Some of these sensors and actuators also exhibit real-time behavior, to ensure
 safety and Quality of Service (QoS). Real-time operation is defined by DIN 44300
 to be the operation of a computer system with programs that are at any time
 ready to process data in a way that the computational results are available
 within a given period of time. This is necessary as these actors interact with
-the real world, being in physical contact (?) with each other and possible even
+the real world, being in physical contact with each other and possible even
 humans. To mitigate risk for human workers and to ensure QoS in the product it
 is strictly necessary to be dependable, as a violation might cost millions or
-potentially the live of humans.
+potentially the lives of humans.
 %\todo{Add actual source.}
 %\todo{predictability}
-%\todo{more}
-
-%These \enquote{things} work depending on hard deadlines might not be able to
-%rely on the unknown network connecting it with the cloud.
 
 % edge
 As latencies in unknown networks are unpredictable a shift away from the cloud
@@ -52,11 +45,3 @@ networks to and from the cloud and the computing resources of the cloud.
 %the network and on the compute-resources of the cloud itself, while also
 %allowing for faster response times by avoiding congested
 %networks~\cite{shi_edge_2016}.
-
-
-%But as these networks grow, traffic and the need for computing
-%power is increasing as well. This is where edge computing comes into play,
-%trying to reduce computational needs in the cloud and traffic into and out of
-%the cloud, by precomputing and presorting network traffic right on the edge of
-%the cloud. As this is a time sensitive task it might be worth exploring
-%possibilities to speed it up.
