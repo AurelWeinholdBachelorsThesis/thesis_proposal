@@ -50,6 +50,13 @@ the original user space program, i.e. it needs more advanced processing or
 access to resources outside of the edge server, or to be directly replied to
 inside the kernel from a further eBPF program.
 
+This framework will be validated by recreating the scenario with real hardware.
+There will be two set ups, one where repetitive tasks are handled in the user
+space, where it would originally have been handled, and one where they are
+handled in the kernel using eBPF. This allows to measure actual data, like the
+response time and load of the edge server. Based on that data it is possible to
+compare the two methods and evaluate the approach.
+
 
 \begin{figure}[htpb]
        \centering
